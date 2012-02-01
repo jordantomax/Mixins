@@ -62,13 +62,12 @@
     box-sizing: $property;
 }
 
-@mixin linear-gradient($start-color: #222, $end-color: #000 ) {
+@mixin linear-gradient($start-position: top, $start-color: #222, $end-color: #000 ) {
    background-color: $end-color;
-   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($start-color), to($end-color));
-   background-image: -webkit-linear-gradient(top, $start-color, $end-color);
-   background-image: -moz-linear-gradient(top, $start-color, $end-color);
-   background-image: -ms-linear-gradient(top, $start-color, $end-color);
-   background-image: -o-linear-gradient(top, $start-color, $end-color);
+   background-image: -webkit-linear-gradient($start-position, $start-color, $end-color);
+   background-image: -moz-linear-gradient($start-position, $start-color, $end-color);
+   background-image: -ms-linear-gradient($start-position, $start-color, $end-color);
+   background-image: -o-linear-gradient($start-position, $start-color, $end-color);
 }
 
 @mixin rounded( $radius: 5px ) {
