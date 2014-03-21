@@ -1,4 +1,3 @@
-
 // position
 @mixin group {
     min-height: 1px;
@@ -19,6 +18,12 @@
     vertical-align: $vertical-align;
 }
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
 
 // triangle
 @mixin triangle( $size: 7px, $position: "bottom", $color: #999 ) {
